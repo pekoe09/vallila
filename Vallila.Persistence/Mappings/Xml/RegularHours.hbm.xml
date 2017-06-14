@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Vallila.Domain" namespace="Vallila.Domain">
+  <class name="RegularHours">
+    <id name="Id" generator="hilo" />
+    <property name="WeekDay" />
+    <property name="StartTime" />
+    <property name="EndTime" />
+  </class>
+</hibernate-mapping>

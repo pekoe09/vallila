@@ -103,7 +103,12 @@
     <Content Include="Mappings\Xml\Address.hbm.xml" />
     <Content Include="Mappings\Xml\BusinessUnit.hbm.xml" />
     <Content Include="Mappings\Xml\Customer.hbm.xml" />
+    <Content Include="Mappings\Xml\CustomerProjectShare.hbm.xml" />
+    <Content Include="Mappings\Xml\LoggedTime.hbm.xml" />
     <Content Include="Mappings\Xml\NationalHoliday.hbm.xml" />
+    <Content Include="Mappings\Xml\Project.hbm.xml" />
+    <Content Include="Mappings\Xml\RegularHours.hbm.xml" />
+    <Content Include="Mappings\Xml\User.hbm.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

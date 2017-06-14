@@ -9,7 +9,6 @@ namespace Vallila.Domain
     public class User : EntityBase
     {
         public virtual String Name { get; set; }
-        public virtual String Abbreviation { get; set; }
-        
+        public virtual String Abbreviation { get; set; }        
     }
 }

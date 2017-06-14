@@ -24,7 +24,12 @@ namespace Vallila.Domain.Tests
                 .AddFile(@"C:\Koodausprojektit\vallila\Vallila.Persistence\Mappings\Xml\Address.hbm.xml")
                 .AddFile(@"C:\Koodausprojektit\vallila\Vallila.Persistence\Mappings\Xml\BusinessUnit.hbm.xml")
                 .AddFile(@"C:\Koodausprojektit\vallila\Vallila.Persistence\Mappings\Xml\Customer.hbm.xml")
-                .AddFile(@"C:\Koodausprojektit\vallila\Vallila.Persistence\Mappings\Xml\NationalHoliday.hbm.xml");
+                .AddFile(@"C:\Koodausprojektit\vallila\Vallila.Persistence\Mappings\Xml\CustomerProjectShare.hbm.xml")
+                .AddFile(@"C:\Koodausprojektit\vallila\Vallila.Persistence\Mappings\Xml\LoggedTime.hbm.xml")
+                .AddFile(@"C:\Koodausprojektit\vallila\Vallila.Persistence\Mappings\Xml\NationalHoliday.hbm.xml")
+                .AddFile(@"C:\Koodausprojektit\vallila\Vallila.Persistence\Mappings\Xml\Project.hbm.xml")
+                .AddFile(@"C:\Koodausprojektit\vallila\Vallila.Persistence\Mappings\Xml\RegularHours.hbm.xml")
+                .AddFile(@"C:\Koodausprojektit\vallila\Vallila.Persistence\Mappings\Xml\User.hbm.xml");
             sessionFactory = config.BuildSessionFactory();
             Session = sessionFactory.OpenSession();
             new SchemaExport(config).Execute(true, true, false, Session.Connection, Console.Out);
