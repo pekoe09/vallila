@@ -102,6 +102,8 @@
     <Content Include="Mappings\Xml\Activity.hbm.xml" />
     <Content Include="Mappings\Xml\Address.hbm.xml" />
     <Content Include="Mappings\Xml\BusinessUnit.hbm.xml" />
+    <Content Include="Mappings\Xml\Customer.hbm.xml" />
+    <Content Include="Mappings\Xml\NationalHoliday.hbm.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -75,6 +75,7 @@ namespace Vallila.Domain.Tests.MappingTests
                 Assert.That(activity.MasterActivity, Is.Not.Null);
                 Assert.That(activity.MasterActivity.Id, Is.EqualTo(masterId));
                 Assert.That(activity.MasterActivity.Name, Is.EqualTo("MasterActivity"));
+                transaction.Commit();
             }
         }
     }

@@ -98,7 +98,9 @@
     <Compile Include="MappingTests\ActivityMappingsTest.cs" />
     <Compile Include="MappingTests\AddressMappingsTest.cs" />
     <Compile Include="MappingTests\BusinessUnitMappingsTest.cs" />
+    <Compile Include="MappingTests\CustomerMappingsTest.cs" />
     <Compile Include="MappingTests\MappingsTestBase.cs" />
+    <Compile Include="MappingTests\NationalHolidayMappingsTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="InMemoryDatabaseForXmlMappings.cs" />
   </ItemGroup>
