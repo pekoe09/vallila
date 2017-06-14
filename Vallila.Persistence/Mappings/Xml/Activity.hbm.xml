@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Vallila.Domain" namespace="Vallila.Domain">
+  <class name="Activity">
+    <id name="Id" generator="hilo" />
+    <property name="Name" />
+    <property name="Abbreviation" />
+    <many-to-one name="MasterActivity" class="Activity" />
+  </class>
+</hibernate-mapping>
