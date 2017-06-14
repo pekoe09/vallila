@@ -20,7 +20,9 @@ namespace Vallila.Domain.Tests
                 .SetProperty(Environment.Dialect, typeof(MsSql2012Dialect).AssemblyQualifiedName)
                 .SetProperty(Environment.ConnectionDriver, typeof(SqlClientDriver).AssemblyQualifiedName)
                 .SetProperty(Environment.ConnectionString, @"data source=.\SQLEXPRESS;database=vallilatst;integrated security=true")
-                .AddFile(@"C:\Koodausprojektit\vallila\Vallila.Persistence\Mappings\Xml\Activity.hbm.xml");
+                .AddFile(@"C:\Koodausprojektit\vallila\Vallila.Persistence\Mappings\Xml\Activity.hbm.xml")
+                .AddFile(@"C:\Koodausprojektit\vallila\Vallila.Persistence\Mappings\Xml\Address.hbm.xml")
+                .AddFile(@"C:\Koodausprojektit\vallila\Vallila.Persistence\Mappings\Xml\BusinessUnit.hbm.xml");
             sessionFactory = config.BuildSessionFactory();
             Session = sessionFactory.OpenSession();
             new SchemaExport(config).Execute(true, true, false, Session.Connection, Console.Out);
