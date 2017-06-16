@@ -97,7 +97,9 @@
       <Name>Vallila.Domain</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Repositories\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Mappings\Xml\Activity.hbm.xml" />
     <Content Include="Mappings\Xml\Address.hbm.xml" />
