@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace Vallila.Models
+namespace Vallila.Models.Dtos
 {
-    public class ActivityViewModel
+    public class RegularHoursDTO
     {
     }
 }

@@ -3,20 +3,32 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Vallila.Services;
+using Vallila.Models.Dtos;
+using Vallila.Models.ViewModels;
 
 namespace Vallila.Controllers
 {
     public class ActivityController : Controller
     {
+        private IActivityService activityService;
+
+        public ActivityController (IActivityService activityService)
+        {
+            this.activityService = activityService;
+        }
+
         // GET: Activity
         public ActionResult Index()
         {
+            ViewData.Add("Activities", activityService.GetAll());
             return View();
         }
 
         // GET: Activity/Details/5
         public ActionResult Details(int id)
         {
+            ViewData.Add("Activity", activityService.GetById(id));
             return View();
         }
 
@@ -45,6 +57,7 @@ namespace Vallila.Controllers
         // GET: Activity/Edit/5
         public ActionResult Edit(int id)
         {
+            ViewData.Add("Activity", activityService.GetById(id));
             return View();
         }
 
@@ -62,12 +75,6 @@ namespace Vallila.Controllers
             {
                 return View();
             }
-        }
-
-        // GET: Activity/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
         }
 
         // POST: Activity/Delete/5

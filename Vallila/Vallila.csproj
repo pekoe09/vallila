@@ -204,26 +204,36 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\ActivityViewModel.cs" />
-    <Compile Include="Models\BusinessUnitViewModel.cs" />
-    <Compile Include="Models\CustomerViewModel.cs" />
-    <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Models\LoggedTimeViewModel.cs" />
-    <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\NationalHolidayViewModel.cs" />
-    <Compile Include="Models\ProjectViewModel.cs" />
-    <Compile Include="Models\RegularHoursViewModel.cs" />
-    <Compile Include="Models\UserViewModel.cs" />
+    <Compile Include="Infrastructure\NinjectDependencyResolver.cs" />
+    <Compile Include="Models\Dtos\ActivityDTO.cs" />
+    <Compile Include="Models\Dtos\BusinessUnitDTO.cs" />
+    <Compile Include="Models\Dtos\CustomerDTO.cs" />
+    <Compile Include="Models\Dtos\LoggedTimeDTO.cs" />
+    <Compile Include="Models\Dtos\NationalHolidayDTO.cs" />
+    <Compile Include="Models\Dtos\UserDTO.cs" />
+    <Compile Include="Models\Dtos\ProjectDTO.cs" />
+    <Compile Include="Models\Dtos\RegularHoursDTO.cs" />
+    <Compile Include="Models\ViewModels\AccountViewModels.cs" />
+    <Compile Include="Models\ViewModels\ActivityViewModel.cs" />
+    <Compile Include="Models\ViewModels\BusinessUnitViewModel.cs" />
+    <Compile Include="Models\ViewModels\CustomerViewModel.cs" />
+    <Compile Include="Models\ViewModels\IdentityModels.cs" />
+    <Compile Include="Models\ViewModels\LoggedTimeViewModel.cs" />
+    <Compile Include="Models\ViewModels\ManageViewModels.cs" />
+    <Compile Include="Models\ViewModels\NationalHolidayViewModel.cs" />
+    <Compile Include="Models\ViewModels\ProjectViewModel.cs" />
+    <Compile Include="Models\ViewModels\RegularHoursViewModel.cs" />
+    <Compile Include="Models\ViewModels\UserViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\ActivityService.cs" />
-    <Compile Include="Services\BusinessUnitService.cs" />
-    <Compile Include="Services\CustomerService.cs" />
-    <Compile Include="Services\LoggedTimeService.cs" />
-    <Compile Include="Services\NationalHolidayService.cs" />
-    <Compile Include="Services\ProjectService.cs" />
-    <Compile Include="Services\RegularHoursService.cs" />
-    <Compile Include="Services\UserService.cs" />
+    <Compile Include="Services\Implementations\ActivityService.cs" />
+    <Compile Include="Services\Implementations\BusinessUnitService.cs" />
+    <Compile Include="Services\Implementations\CustomerService.cs" />
+    <Compile Include="Services\IActivityService.cs" />
+    <Compile Include="Services\Implementations\LoggedTimeService.cs" />
+    <Compile Include="Services\Implementations\NationalHolidayService.cs" />
+    <Compile Include="Services\Implementations\ProjectService.cs" />
+    <Compile Include="Services\Implementations\RegularHoursService.cs" />
+    <Compile Include="Services\Implementations\UserService.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -301,10 +311,13 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Scripts\jquery-3.1.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.1.1.min.map" />
+    <Content Include="Views\Activity\Index.cshtml" />
+    <Content Include="Views\Activity\Details.cshtml" />
+    <Content Include="Views\Activity\Create.cshtml" />
+    <Content Include="Views\Activity\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Activity\" />
     <Folder Include="Views\BusinessUnit\" />
     <Folder Include="Views\Customer\" />
     <Folder Include="Views\LoggedTime\" />

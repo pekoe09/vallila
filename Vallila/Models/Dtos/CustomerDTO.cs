@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace Vallila.Services
+namespace Vallila.Models.Dtos
 {
-    public class ActivityService
+    public class CustomerDTO
     {
     }
 }
