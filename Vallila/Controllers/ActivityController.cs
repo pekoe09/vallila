@@ -21,15 +21,13 @@ namespace Vallila.Controllers
         // GET: Activity
         public ActionResult Index()
         {
-            ViewData.Add("Activities", activityService.GetAll());
-            return View();
+            return View(activityService.GetAll());
         }
 
         // GET: Activity/Details/5
         public ActionResult Details(int id)
         {
-            ViewData.Add("Activity", activityService.GetById(id));
-            return View();
+            return View(activityService.GetById(id));
         }
 
         // GET: Activity/Create
@@ -57,23 +55,31 @@ namespace Vallila.Controllers
         // GET: Activity/Edit/5
         public ActionResult Edit(int id)
         {
-            ViewData.Add("Activity", activityService.GetById(id));
-            return View();
+            return View(activityService.GetById(id));
         }
 
         // POST: Activity/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(ActivityDTO activityDTO)
         {
             try
             {
-                // TODO: Add update logic here
-
-                return RedirectToAction("Index");
+                if (ModelState.IsValid)
+                {
+                    ActivityViewModel activityViewModel = activityService.Save(activityDTO);
+                    TempData["success"] = String.Format("Activity {0} has been updated!", activityViewModel.Name);
+                    return RedirectToAction("Index");
+                }
+                else
+                {
+                    ActivityViewModel activityViewModel = activityService.GetById((int)activityDTO.Id);
+                    return View(activityViewModel);
+                }
             }
             catch
             {
-                return View();
+                ActivityViewModel activityViewModel = activityService.GetById((int)activityDTO.Id);
+                return View(activityViewModel);
             }
         }
 

@@ -7,6 +7,8 @@ using Ninject.Parameters;
 using Ninject.Syntax;
 using Vallila.Services;
 using Vallila.Services.Implementations;
+using Vallila.Persistence.Repositories;
+using Vallila.Persistence.Repositories.Implementations;
 
 namespace Vallila.Infrastructure
 {
@@ -32,7 +34,12 @@ namespace Vallila.Infrastructure
 
         private void AddBindings()
         {
+            // bind service interfaces to implementation classes
             kernel.Bind<IActivityService>().To<ActivityService>();
+
+            // bind repository interfaces to implementation classes
+            kernel.Bind<IActivityRepository>().To<ActivityRepository>();
+
         }
     }
 }

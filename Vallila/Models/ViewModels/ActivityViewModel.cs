@@ -11,7 +11,7 @@ namespace Vallila.Models.ViewModels
         public int? Id { get; set; }
         public String Name { get; set; }
         public String Abbreviation { get; set; }
-        public ActivityDTO MasterActivityId { get; set; }
+        public ActivityDTO MasterActivity { get; set; }
         public List<ActivityDTO> Activities { get; set; }
     }
 }

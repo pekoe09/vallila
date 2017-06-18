@@ -12,5 +12,6 @@ namespace Vallila.Services
     {
         IEnumerable<ActivityViewModel> GetAll();
         ActivityViewModel GetById(int id);
+        ActivityViewModel Save(ActivityDTO activityDTO);
     }
 }
